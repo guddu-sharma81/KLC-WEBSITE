@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-pine: #002e29;
+  --color-brand-pine-dark: #001a17;
+  --color-brand-pine-light: #004841;
+  --color-brand-teal: #008277;
+  --color-brand-teal-dark: #005a52;
+  --color-brand-teal-light: #029d90;
+  --color-brand-gold: #d4af37;
+  --color-brand-gold-light: #f8df8c;
+  --color-brand-gold-dark: #b88d1d;
+  --color-brand-emergency: #e11d48;
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f6faf9;
+  color: #0c1e1c;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
